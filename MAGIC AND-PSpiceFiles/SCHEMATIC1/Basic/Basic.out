@@ -1,0 +1,111 @@
+
+**** 05/04/17 07:47:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Basic"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\magic and-pspicefiles\schematic1\basic.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Basic.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.6_Lite/tools/capture/library/pspice/memristor.lib" 
+* From [PSPICE NETLIST] section of C:\Users\xdsarkar\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MAGIC AND
+X_M1         N00994 N00926 STATE MEMRISTOR
+X_M2         N00926 N00930 STATE MEMRISTOR
+X_M3         N00930 0 STATE MEMRISTOR
+R_R2         STATE N00484  1G TC=0,0 
+V_V1         N00484 0 0.5Vdc
+V_V2         N00619 0 0.5Vdc
+R_R3         STATE N00619  1G TC=0,0 
+R_R4         STATE N00756  1G TC=0,0 
+V_V3         N00756 0 0.5Vdc
+V_V4         N00994 0 -2.3Vdc
+
+**** RESUMING Basic.cir ****
+.END
+
+Starting pseudo-transient algorithm.
+
+**** 05/04/17 07:47:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Basic"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\magic and-pspicefiles\schematic1\basic.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(STATE)    1.0000  (N00484)     .5000 (N00619)     .5000 (N00756)     .5000     
+
+(N00926)   -1.5333 (N00930)    -.7667 (N00994)   -2.3000 (X_M1.4)   -1.5409     
+
+(X_M1.8)    -.7591 (X_M1.9)   -1.5409 (X_M2.4)    -.7743 (X_M2.8)    -.7591     
+
+(X_M2.9)    -.7743 (X_M3.4)    -.0076 (X_M3.8)    -.7591 (X_M3.9)    -.0076     
+
+(X_M1.10)    1.0000                   (X_M2.10)    1.0000                       
+
+(X_M3.10)    1.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         5.000E-10
+    V_V2         5.000E-10
+    V_V3         5.000E-10
+    V_V4         7.591E-04
+    X_M1.Vsense  -7.591E-04
+    X_M2.Vsense  -7.591E-04
+    X_M3.Vsense  -7.591E-04
+
+    TOTAL POWER DISSIPATION   1.75E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/04/17 07:47:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Basic"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\magic and-pspicefiles\schematic1\basic.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        1.91
+

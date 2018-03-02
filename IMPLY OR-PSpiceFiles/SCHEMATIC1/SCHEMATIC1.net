@@ -1,0 +1,10 @@
+* source IMPLY OR
+V_V18         N09360 0 0.5Vdc
+R_R7         0 VSET  5k TC=0,0 
+V_V1         N09296 0 0.5Vdc
+V_V17         VCOND 0 0.5Vdc
+X_M4         VSET VSET STATEP MEMRISTOR
+V_V16         VSET 0 1Vdc
+X_M5         VSET VCOND STATEQ MEMRISTOR
+R_R8         STATEQ N09360  1G TC=0,0 
+R_R2         STATEP N09296  1G TC=0,0 

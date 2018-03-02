@@ -1,0 +1,53 @@
+
+**** 05/01/17 16:47:11 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Basic"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\magic or-pspicefiles\schematic1\basic.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Basic.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.6_Lite/tools/capture/library/pspice/memristor.lib" 
+* From [PSPICE NETLIST] section of C:\Users\xdsarkar\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MAGIC OR
+X_M1         N00115 N00115 N00139 MEMRISTOR
+X_M2         N01737 N00115 N00143 MEMRISTOR
+X_M3         N00115 N00340 N00210 MEMRISTOR
+R_R1         N00139 N001660  1G TC=0,0 
+R_R2         N001841 N00143  1G TC=0,0 
+R_R3         N002021 N00210  1G TC=0,0 
+V_V1         N001660 0 0.5Vdc
+V_V2         N001841 0 0.5Vdc
+V_V3         N002021 0 0.5Vdc
+V_V4         N00115 0 1Vdc
+R_R4         N00340 0  5k TC=0,0 
+V_V5         N01737 0 1Vdc
+R_R5         N01737 N00115  0 TC=0,0 
+----------------------------$
+ERROR(ORPSIM-16144): Value may not be 0
+
+**** RESUMING Basic.cir ****
+.END
+

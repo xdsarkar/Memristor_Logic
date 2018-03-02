@@ -1,0 +1,109 @@
+
+**** 03/22/17 19:22:27 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Trans"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\logic gates-pspicefiles\schematic1\trans.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.6_Lite/tools/capture/library/pspice/memristor.lib" 
+* From [PSPICE NETLIST] section of C:\Users\xdsarkar\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LOGIC GATES
+X_M1         INPUT N00102 IN1 MEMRISTOR
+X_M2         N00102 N00106 IN2 MEMRISTOR
+X_M3         N00106 OUTPUT OUT1 MEMRISTOR
+R_R3         OUT1 N00357  1G TC=0,0 
+V_V3         N00357 0 0.5Vdc
+R_R4         OUTPUT 0  1k TC=0,0 
+V_V7         INPUT 0 1Vdc
+V_V9         IN2 0 1.5Vdc
+V_V10         IN1 0  
++SIN 0 1Vdc 500Hz 0 0 0
+
+**** RESUMING Trans.cir ****
+.END
+
+**** 03/22/17 19:22:27 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Trans"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\logic gates-pspicefiles\schematic1\trans.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN1)    0.0000  (  IN2)    1.5000  ( OUT1) 1.015E-06  (INPUT)    1.0000      
+
+(N00102)     .9951 (N00106)     .4975 (N00357)     .5000 (OUTPUT)     .4926     
+
+(X_M1.4)    1.0000 (X_M1.8)     .4926 (X_M1.9)    1.0000 (X_M2.4)     .5025     
+
+(X_M2.8)     .4926 (X_M2.9)     .5025 (X_M3.4)     .4975 (X_M3.8)     .4926     
+
+(X_M3.9)     .4975 (X_M1.10)    0.0000                   (X_M2.10)    1.0000    
+
+(X_M3.10) 1.015E-06                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -5.000E-10
+    V_V7        -4.926E-04
+    V_V9        -1.502E-09
+    V_V10        0.000E+00
+    X_M1.Vsense   4.926E-04
+    X_M2.Vsense   4.926E-04
+    X_M3.Vsense   4.926E-04
+
+    TOTAL POWER DISSIPATION   4.93E-04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/22/17 19:22:27 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Trans"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\logic gates-pspicefiles\schematic1\trans.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+

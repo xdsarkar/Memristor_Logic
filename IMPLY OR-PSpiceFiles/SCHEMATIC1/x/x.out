@@ -1,0 +1,103 @@
+
+**** 05/01/17 15:55:11 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-x"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\IMPLY OR-PSpiceFiles\SCHEMATIC1\x.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "x.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.6_Lite/tools/capture/library/pspice/memristor.lib" 
+* From [PSPICE NETLIST] section of C:\Users\xdsarkar\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source IMPLY OR
+V_V18         N09360 0 0.5Vdc
+R_R7         0 VSET  5k TC=0,0 
+V_V1         N09296 0 0.5Vdc
+V_V17         VCOND 0 0.5Vdc
+X_M4         VSET VSET STATEP MEMRISTOR
+V_V16         VSET 0 1Vdc
+X_M5         VSET VCOND STATEQ MEMRISTOR
+R_R8         STATEQ N09360  1G TC=0,0 
+R_R2         STATEP N09296  1G TC=0,0 
+
+**** RESUMING x.cir ****
+.END
+
+**** 05/01/17 15:55:11 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-x"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\IMPLY OR-PSpiceFiles\SCHEMATIC1\x.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VSET)    1.0000  (VCOND)     .5000  (N09296)     .5000 (N09360)     .5000     
+
+(STATEP)     .2499 (STATEQ) 10.00E-09 (X_M4.4)    1.0000 (X_M4.8)    0.0000     
+
+(X_M4.9)    1.0000 (X_M5.4)    1.0000 (X_M5.8)   50.0000 (X_M5.9)    1.0000     
+
+(X_M4.10)     .2499                   (X_M5.10) 10.00E-09                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V18       -5.000E-10
+    V_V1        -2.501E-10
+    V_V17        5.000E-02
+    V_V16       -5.020E-02
+    X_M4.Vsense   0.000E+00
+    X_M5.Vsense   5.000E-02
+
+    TOTAL POWER DISSIPATION   2.52E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/01/17 15:55:11 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-x"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\IMPLY OR-PSpiceFiles\SCHEMATIC1\x.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        9.53
+

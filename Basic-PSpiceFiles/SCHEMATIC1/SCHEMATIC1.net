@@ -1,0 +1,7 @@
+* source BASIC
+X_M1         INPUT OUTPUT STATE MEMRISTOR
+R_R1         OUTPUT 0  1k TC=0,0 
+R_R2         STATE N00164  1G TC=0,0 
+V_V1         N00164 0 0.5Vdc
+V_V2         INPUT 0  
++SIN 0 1Vdc 500Hz 0 0 0

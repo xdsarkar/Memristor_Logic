@@ -1,0 +1,93 @@
+
+**** 11/13/17 16:47:51 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Basic Transient"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\basic-pspicefiles\schematic1\basic transi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Basic Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.6_Lite/tools/capture/library/pspice/memristor.lib" 
+* From [PSPICE NETLIST] section of C:\Users\xdsarkar\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source BASIC
+X_M1         INPUT OUTPUT STATE MEMRISTOR
+R_R1         OUTPUT 0  1k TC=0,0 
+R_R2         STATE N00164  1G TC=0,0 
+V_V1         N00164 0 0.5Vdc
+V_V2         INPUT 0  
++SIN 0 1Vdc 500Hz 0 0 0
+
+**** RESUMING "Basic Transient.cir" ****
+.END
+
+**** 11/13/17 16:47:51 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Basic Transient"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\basic-pspicefiles\schematic1\basic transi
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(INPUT)    0.0000  (STATE)     .2499  (N00164)     .5000 (OUTPUT)    0.0000     
+
+(X_M1.4)    0.0000 (X_M1.8)    0.0000 (X_M1.9)    0.0000 (X_M1.10)     .2499    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.501E-10
+    V_V2         0.000E+00
+    X_M1.Vsense   0.000E+00
+
+    TOTAL POWER DISSIPATION   1.25E-10  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/13/17 16:47:51 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Basic Transient"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\basic-pspicefiles\schematic1\basic transi
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        4.80
+

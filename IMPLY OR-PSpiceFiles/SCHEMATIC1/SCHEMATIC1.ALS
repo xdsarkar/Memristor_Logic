@@ -1,0 +1,15 @@
+.ALIASES
+V_V18           V18(+=N09360 -=0 ) CN @IMPLY OR.SCHEMATIC1(sch_1):INS9364@SOURCE.VDC.Normal(chips)
+R_R7            R7(1=0 2=VSET ) CN @IMPLY OR.SCHEMATIC1(sch_1):INS9164@ANALOG.R.Normal(chips)
+V_V1            V1(+=N09296 -=0 ) CN @IMPLY OR.SCHEMATIC1(sch_1):INS9300@SOURCE.VDC.Normal(chips)
+V_V17           V17(+=VCOND -=0 ) CN @IMPLY OR.SCHEMATIC1(sch_1):INS9104@SOURCE.VDC.Normal(chips)
+X_M4            M4(+=VSET -=VSET S=STATEP ) CN @IMPLY OR.SCHEMATIC1(sch_1):INS9204@MEMRISTOR.memristor.Normal(chips)
+V_V16           V16(+=VSET -=0 ) CN @IMPLY OR.SCHEMATIC1(sch_1):INS9082@SOURCE.VDC.Normal(chips)
+X_M5            M5(+=VSET -=VCOND S=STATEQ ) CN @IMPLY OR.SCHEMATIC1(sch_1):INS9234@MEMRISTOR.memristor.Normal(chips)
+R_R8            R8(1=STATEQ 2=N09360 ) CN @IMPLY OR.SCHEMATIC1(sch_1):INS9336@ANALOG.R.Normal(chips)
+R_R2            R2(1=STATEP 2=N09296 ) CN @IMPLY OR.SCHEMATIC1(sch_1):INS9272@ANALOG.R.Normal(chips)
+_    _(stateP=STATEP)
+_    _(stateQ=STATEQ)
+_    _(Vcond=VCOND)
+_    _(Vset=VSET)
+.ENDALIASES

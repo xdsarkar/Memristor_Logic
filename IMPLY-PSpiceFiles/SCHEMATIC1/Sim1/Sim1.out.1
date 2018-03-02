@@ -1,0 +1,49 @@
+
+**** 05/03/17 04:31:05 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Sim1"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\imply-pspicefiles\schematic1\sim1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Sim1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.6_Lite/tools/capture/library/pspice/memristor.lib" 
+* From [PSPICE NETLIST] section of C:\Users\xdsarkar\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source IMPLY
+V_V18         N07656 0 0.5Vdc
+X_M4         VCOND VCOND STATEP MEMRISTOR
+V_V17         VCOND 0 1Vdc
+R_R8         STATEQ N07656  1G TC=0,0 
+V_V1         N07584 0 0.5Vdc
+V_V16         VCOND 0 0.5Vdc
+X_M5         VCOND VCOND STATEQ MEMRISTOR
+R_R2         STATEP N07584  1G TC=0,0 
+R_R7         0 VCOND  5k TC=0,0 
+
+**** RESUMING Sim1.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V16. You may break the loop by adding a series resistance
+

@@ -1,0 +1,52 @@
+
+**** 03/20/17 18:00:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Square"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\Basic-PSpiceFiles\SCHEMATIC1\Square.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Square.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.6_Lite/tools/capture/library/pspice/memristor.lib" 
+* From [PSPICE NETLIST] section of C:\Users\xdsarkar\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source BASIC
+X_M1         INPUT OUTPUT STATE MEMRISTOR
+R_R1         OUTPUT 0  1k TC=0,0 
+R_R2         STATE N00164  1G TC=0,0 
+V_V1         N00164 0 0.5Vdc
+V_V2         INPUT 0  
++SIN 0 1Vdc 500Hz 0 0 0
+X_M2         INPUT OUTPUT STATE MEMRISTOR
+R_R3         OUTPUT 0  1k TC=0,0 
+R_R4         STATE N00839  1G TC=0,0 
+V_V3         N00839 0 0.5Vdc
+V_V5         INPUT 0  
++PULSE 0.5 0.5 1p 1p 1p 0.5ms 1ms
+
+**** RESUMING Square.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V5. You may break the loop by adding a series resistance
+

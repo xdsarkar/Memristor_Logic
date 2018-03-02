@@ -1,0 +1,58 @@
+
+**** 05/03/17 02:49:26 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BASIC"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\imply nor-pspicefiles\schematic1\basic.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "BASIC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.6_Lite/tools/capture/library/pspice/memristor.lib" 
+* From [PSPICE NETLIST] section of C:\Users\xdsarkar\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source IMPLY NOR
+X_M1         N00124 N00124 N00547 MEMRISTOR
+X_M2         N00128 N01188 N00433 MEMRISTOR
+X_M3         N00132 N00142 N00236 MEMRISTOR
+R_R1         0 N01188  5k TC=0,0 
+R_R2         N00236 N00323  1G TC=0,0 
+V_V1         N00323 0 0.5Vdc
+V_V2         N00473 0 0.5Vdc
+R_R3         N00433 N00473  1G TC=0,0 
+V_V3         N00587 0 0.5Vdc
+R_R4         N00547 N00587  1G TC=0,0 
+V_V4         N00124 0 2.2Vdc
+V_V5         N00128 0 2.2Vdc
+V_V6         N00132 0 1,5Vdc
+------------------------$
+ERROR -- Expecting keyword STIMULUS, saw 5Vdc.
+
+R_R5         0 N00142  5k TC=0,0 
+R_R6         0 N00124  5k TC=0,0 
+R_R7         N01188 N00142  0.0001k TC=0,0 
+R_R8         N00124 N00142  0.0001k TC=0,0 
+
+**** RESUMING BASIC.cir ****
+.END
+

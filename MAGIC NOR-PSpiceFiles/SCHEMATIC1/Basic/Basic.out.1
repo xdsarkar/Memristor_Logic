@@ -1,0 +1,53 @@
+
+**** 03/28/17 00:19:45 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Basic"  [ C:\Users\xdsarkar\Desktop\MemristorSimulations\MAGIC NOR-PSpiceFiles\SCHEMATIC1\Basic.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Basic.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\xdsarkar\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MAGIC NOR
+X_M5         N10062 N09520 STATEP MEMRISTOR
+V_V18         N08954 0 0.5Vdc
+R_R8         STATEP N08954  1G TC=0,0 
+V_V19         N09330 0 0.5Vdc
+R_R9         STATEQ N09330  1G TC=0,0 
+X_M6         N10062 N09520 STATEQ MEMRISTOR
+R_R10         STATEOUTPUT N09860  1G TC=0,0 
+X_M7         0 N09520 STATEOUTPUT MEMRISTOR
+V_V20         N09860 0 1.5Vdc
+V_V21         N10062 0 1.2Vdc
+
+**** RESUMING Basic.cir ****
+.END
+
+ERROR(ORPSIM-15108): Subcircuit MEMRISTOR used by X_M5 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit MEMRISTOR used by X_M6 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit MEMRISTOR used by X_M7 is undefined
+
